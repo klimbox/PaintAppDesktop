@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33C6608A-23EC-46E0-AE2A-4A7ED20F5757}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Our_mockup</RootNamespace>
+    <AssemblyName>Our mockup</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Activiti\ActionTheme.cs" />
+    <Compile Include="Api\Activiti\ActionFigurMouse.cs" />
+    <Compile Include="Api\Activiti\ActionLanguage.cs" />
+    <Compile Include="Api\Activiti\ActionMouse.cs" />
+    <Compile Include="Api\Activiti\ActionRemoveTab.cs" />
+    <Compile Include="Api\Activiti\ActionHelp.cs" />
+    <Compile Include="Api\Activiti\ActionNewTab.cs" />
+    <Compile Include="Api\Activiti\ActionRenameTab.cs" />
+    <Compile Include="Api\Activiti\ActionSwithTab.cs" />
+    <Compile Include="Api\Activiti\ActionEnterText.cs" />
+    <Compile Include="Api\Activiti\ActionFont.cs" />
+    <Compile Include="Api\Activiti\ActionColor.cs" />
+    <Compile Include="Api\Activiti\ActionPlagins.cs" />
+    <Compile Include="Api\Activiti\ActionFigurType.cs" />
+    <Compile Include="Api\Activiti\ActionOpen.cs" />
+    <Compile Include="Api\Activiti\ActionSave.cs" />
+    <Compile Include="Api\Activiti\ActionStrockeWidth.cs" />
+    <Compile Include="Api\Language\English.cs" />
+    <Compile Include="Api\Language\Russian.cs" />
+    <Compile Include="Api\Language\SetapLanuage.cs" />
+    <Compile Include="Api\SaveLoad\Json.cs" />
+    <Compile Include="Api\SaveLoad\Xsml.cs" />
+    <Compile Include="Api\SaveLoad\Yaml.cs" />
+    <Compile Include="Api\Tab\NewTab.cs" />
+    <Compile Include="Api\Theme\Dark.cs" />
+    <Compile Include="Api\Theme\Light.cs" />
+    <Compile Include="Api\Theme\SetapTheme.cs" />
+    <Compile Include="Api\XCommand.cs" />
+    <Compile Include="Api\XData.cs" />
+    <Compile Include="UI\Form\Form help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Form help.Designer.cs">
+      <DependentUpon>Form help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Form from Entered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Form from Entered.Designer.cs">
+      <DependentUpon>Form from Entered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Form from AT\AT on  menuBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Form from AT\AT on  menuBar.Designer.cs">
+      <DependentUpon>AT on  menuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\ContexMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\ContexMenu.Designer.cs">
+      <DependentUpon>ContexMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Panel\Figuree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\Figuree.Designer.cs">
+      <DependentUpon>Figuree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\MenuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\MenuBar.Designer.cs">
+      <DependentUpon>MenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\Panel.Designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\pDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\pDraw.Designer.cs">
+      <DependentUpon>pDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\Plagins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\Plagins.Designer.cs">
+      <DependentUpon>Plagins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Api\Propertes and figur\EmtyFigure.cs" />
+    <Compile Include="UI\Panel\Property\Figure with text.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\Property\Figure with text.Designer.cs">
+      <DependentUpon>Figure with text.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Api\Propertes and figur\FigurWithText.cs" />
+    <Compile Include="UI\Panel\Property\Propertes Emty figure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\Property\Propertes Emty figure.Designer.cs">
+      <DependentUpon>Propertes Emty figure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\StatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\StatusBar.Designer.cs">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panel\ToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panel\ToolBar.Designer.cs">
+      <DependentUpon>ToolBar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Form\Form from AT\AT on  menuBar.resx">
+      <DependentUpon>AT on  menuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\ContexMenu.resx">
+      <DependentUpon>ContexMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Form\Form from Entered.resx">
+      <DependentUpon>Form from Entered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Form help.resx">
+      <DependentUpon>Form help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\Figuree.resx">
+      <DependentUpon>Figuree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\MenuBar.resx">
+      <DependentUpon>MenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\pDraw.resx">
+      <DependentUpon>pDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\Plagins.resx">
+      <DependentUpon>Plagins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\Property\Figure with text.resx">
+      <DependentUpon>Figure with text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\Property\Propertes Emty figure.resx">
+      <DependentUpon>Propertes Emty figure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\StatusBar.resx">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panel\ToolBar.resx">
+      <DependentUpon>ToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
