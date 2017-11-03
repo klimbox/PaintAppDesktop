@@ -14,11 +14,12 @@ namespace ATTest
     [TestClass]
     public class UnitTest1
     {
+        private const string appPath = @"e:\ORT_projects\DesktopPrototype\PaintAppDesktop\Form from AT\MenuBar.exe";
         private static Window window1;
         [ClassInitialize]
         public static void Class_Init(TestContext context)
         {
-            Application application = Application.Launch(@"C:\Users\Roman\source\repos\НУжные\Our mockup\Form from AT\MenuBar.exe");
+            Application application = Application.Launch(appPath);
             window1 = application.GetWindow("Form1AT", InitializeOption.WithCache);
         }
            
@@ -26,7 +27,7 @@ namespace ATTest
         public void Data_Clean()
         {
             window1.Close();
-            Application application = Application.Launch(@"C:\Users\Roman\source\repos\НУжные\Our mockup\Form from AT\MenuBar.exe");
+            Application application = Application.Launch(appPath);
             window1 = application.GetWindow("Form1AT", InitializeOption.NoCache);
         }
         [ClassCleanup]
